@@ -1,0 +1,3 @@
+C:/Users/10001222349/Documents/nocca/build/CMakeFiles/nocca.dir
+C:/Users/10001222349/Documents/nocca/build/CMakeFiles/edit_cache.dir
+C:/Users/10001222349/Documents/nocca/build/CMakeFiles/rebuild_cache.dir
