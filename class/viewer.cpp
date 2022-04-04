@@ -22,33 +22,51 @@ void Viewer::showPosition(Player player_white, Player player_black) {
 
 	S4 s4t_x;
 	S4 s4t_y;
+	S4 s4t_z;
 	S4 s4t_i;
+	S4 s4t_state;
 
-	for (s4t_y = 0; s4t_y < 6; s4t_y++) {
-		for (s4t_x = 0; s4t_x < 5; s4t_x++) {
+	for (s4t_z = 0; s4t_z < 3; s4t_z++) {
+		for (s4t_y = 5; s4t_y >= 0; s4t_y--) {
+			for (s4t_x = 0; s4t_x < 5; s4t_x++) {
 
-			for (s4t_i = 0; s4t_i < 5; s4t_i++) {
-				if ((s4t_x == player_white.as4_position[s4t_i * 3 + 0]) &&
-					(s4t_y == player_white.as4_position[s4t_i * 3 + 1]))
-				{
-					cout << "w" << s4t_i;
-					cout << " ";
+				s4t_state = 1;
+
+				for (s4t_i = 0; s4t_i < 5; s4t_i++) {
+					if ((player_white.as4_position[s4t_i * 3 + 0] == s4t_x) &&
+						(player_white.as4_position[s4t_i * 3 + 1] == s4t_y) &&
+						(player_white.as4_position[s4t_i * 3 + 2] == s4t_z))
+					{
+						cout << "w" << s4t_i;
+						cout << " ";
+						s4t_state = 0;
+						break;
+					}
+					else if ((player_black.as4_position[s4t_i * 3 + 0] == s4t_x) &&
+							 (player_black.as4_position[s4t_i * 3 + 1] == s4t_y) &&
+							 (player_black.as4_position[s4t_i * 3 + 2] == s4t_z))
+					{
+						cout << "b" << s4t_i;
+						cout << " ";
+						s4t_state = 0;
+						break;
+					}
+					else {
+						/*  NOP */
+					}
 				}
-				else if ((s4t_x == player_black.as4_position[s4t_i * 3 + 0]) &&
-					(s4t_y == player_black.as4_position[s4t_i * 3 + 1]))
-				{
-					cout << "b" << s4t_i;
-					cout << " ";
-				}
-				else {
+				if (s4t_state == 1) {
 					cout << "--";
 					cout << " ";
 				}
+				else {
+					/* NOP */
+				}
 			}
+			cout << "\n";
 		}
 		cout << "\n";
 	}
-
 }
 
 /* Private */
