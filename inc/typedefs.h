@@ -21,10 +21,20 @@ typedef double						F8;		/* Floating point 8byte data type		*/
 typedef int							BL;		/* Boolean data type					*/
 
 /* Enum */
-enum EN_COLOR{
+enum EN_COLOR {
     White,
     Black,
 };
+
+enum EN_STATE {
+    WhitePlay,
+    BlackPlay,
+    WhiteWin,
+    BlackWin,
+    Error
+};
+
+/* Structs */
 
 /* Macro Functions */
 

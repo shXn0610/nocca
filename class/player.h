@@ -17,9 +17,9 @@ class Player {
 public:
 	Player(EN_COLOR en_color);
 	~Player(void);
-	void showPosition1(void);
-	void showPosition2(void);
-	S4	 moveManually(Player player_enemy, S4 s4_num, S4 s4_x, S4 s4_y);
+	void showPosition(void);
+	S4	 moveManually(Player player_enemy);
+	S4	 moveAuto(Player player_enemy);
 
 	EN_COLOR	en_color;
 	S4			as4_position[15];

@@ -16,9 +16,11 @@
 /* Class */
 class Judgeman {
 public:
-	Judgeman(void);
+	S4		s4_positionWhite_save[15];
+	S4		s4_positionBlack_save[15];
+	Judgeman(Player player_white, Player player_black);
 	~Judgeman(void);
-	void showPosition(Player player_white, Player player_black);
+	EN_STATE judgeWinLose(Player player_white, Player player_black, EN_STATE en_state);
 
 private:
     

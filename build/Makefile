@@ -128,6 +128,30 @@ nocca/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/build
 .PHONY : nocca/fast
 
+class/judgeman.obj: class/judgeman.cpp.obj
+.PHONY : class/judgeman.obj
+
+# target to build an object file
+class/judgeman.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.obj
+.PHONY : class/judgeman.cpp.obj
+
+class/judgeman.i: class/judgeman.cpp.i
+.PHONY : class/judgeman.i
+
+# target to preprocess a source file
+class/judgeman.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.i
+.PHONY : class/judgeman.cpp.i
+
+class/judgeman.s: class/judgeman.cpp.s
+.PHONY : class/judgeman.s
+
+# target to generate assembly for a file
+class/judgeman.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.s
+.PHONY : class/judgeman.cpp.s
+
 class/player.obj: class/player.cpp.obj
 .PHONY : class/player.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... nocca
+	@echo ... class/judgeman.obj
+	@echo ... class/judgeman.i
+	@echo ... class/judgeman.s
 	@echo ... class/player.obj
 	@echo ... class/player.i
 	@echo ... class/player.s
