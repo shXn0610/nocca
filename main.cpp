@@ -30,15 +30,15 @@ main () {
     while ((en_state == WhitePlay) || (en_state == BlackPlay)) {
         if (en_state == WhitePlay) {
             
-            //player_white.moveManually(player_black);
+            player_white.moveManually(player_black);
             
-            player_white.moveAuto(player_black);
+            //player_white.moveAuto(player_black);
         }
         else if (en_state == BlackPlay) {
 
             //player_black.moveManually(player_white);
 
-            player_black.moveAuto(player_white);
+            player_black.moveAutoNN(player_white);
         }
         else {
             /* NOP */

@@ -17,12 +17,14 @@ class Player {
 public:
 	Player(EN_COLOR en_color);
 	~Player(void);
-	void showPosition(void);
+
 	S4	 moveManually(Player player_enemy);
 	S4	 moveAuto(Player player_enemy);
+	S4	 moveAutoNN(Player player_enemy);
 
 	EN_COLOR	en_color;
 	S4			as4_position[15];
+	F4			af4_weight[1200];
 private:
     
 };

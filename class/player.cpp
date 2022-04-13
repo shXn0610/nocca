@@ -9,6 +9,10 @@ using namespace std;
 /* Variables */
 
 /* prototypes */
+void 	vdg_InitInput(Player player_this, Player player_enemy, S4 *pas4t_input);
+void 	vdg_InitOutput(F4 *paf4t_output);
+void 	vdg_Predict(Player player_this, S4 *pas4t_input, F4 *paf4t_output);
+S4		s4t_DecodeOutput(F4 *paf4t_output);
 
 /* Public */
 Player::Player(EN_COLOR en_color) {
@@ -34,6 +38,12 @@ Player::Player(EN_COLOR en_color) {
 		/* NOP */
 	}
 
+	/* Initialize weight */
+	srand(time(NULL));
+	for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
+		Player::af4_weight[s4t_i] = ((float)rand() / (float)RAND_MAX) - 0.5f;
+	}
+
 	//cout << "Constructor is called.\n";
 	//cout << "\n";
 };
@@ -44,14 +54,6 @@ Player::~Player() {
 	//cout << "\n";
 
 };
-
-void Player::showPosition(void) {
-	S4 s4t_i;
-	for (s4t_i = 0; s4t_i < 15; s4t_i++) {
-		cout << Player::as4_position[s4t_i] << " ";
-	}
-	cout << "\n";
-}
 
 S4 Player::moveManually(Player player_enemy) {
 	S4	s4t_i;
@@ -317,8 +319,6 @@ S4 Player::moveAuto(Player player_enemy) {
 			/* NOP */
 		}
 
-		
-
 		/* Update Position of x and y */
 		s4t_x_updated = this->as4_position[s4t_num * 3 + 0] + s4t_x;
 		s4t_y_updated = this->as4_position[s4t_num * 3 + 1] + s4t_y;
@@ -407,4 +407,159 @@ S4 Player::moveAuto(Player player_enemy) {
 	return 0;
 }
 
+S4 Player::moveAutoNN(Player player_enemy) {
+	S4		as4t_input[30];
+	F4		af4t_output[40];
+	S4		s4t_output = 0;
+
+	S4		s4t_i = 0; 
+	S4		s4t_count = 0;
+
+	S4		s4t_num = 0;
+	S4		s4t_tmp = 0;
+	S4		s4t_dx = 0;
+	S4		s4t_dy = 0;
+	S4		s4t_x_updated = 0;
+	S4		s4t_y_updated = 0;
+	S4		s4t_z_updated = 0;
+
+	/* Initialize */
+	vdg_InitInput(*this, player_enemy, as4t_input);
+	vdg_InitOutput(af4t_output);
+
+	/* Predict */
+	vdg_Predict(*this, as4t_input, af4t_output);
+	s4t_output = s4t_DecodeOutput(af4t_output);
+
+	s4t_num = s4t_output / 8;
+	s4t_tmp = s4t_output % 8;
+
+	switch(s4t_tmp) {
+		case 0:
+			s4t_dx = 1;
+			s4t_dy = 1;
+			break;
+		case 1:
+			s4t_dx = 0;
+			s4t_dy = 1;
+			break;
+		case 2:
+			s4t_dx = -1;
+			s4t_dy = 1;
+			break;
+		case 3:
+			s4t_dx = 1;
+			s4t_dy = 0;
+			break;
+		case 4:
+			s4t_dx = -1;
+			s4t_dy = 0;
+			break;
+		case 5:
+			s4t_dx = 1;
+			s4t_dy = -1;
+			break;
+		case 6:
+			s4t_dx = 0;
+			s4t_dy = -1;
+			break;
+		case 7:
+			s4t_dx = -1;
+			s4t_dy = -1;
+			break;
+		default:
+			break;
+	}
+
+	/* Upadate */
+	s4t_x_updated = this->as4_position[3 * s4t_num + 0] + s4t_dx;
+	s4t_y_updated = this->as4_position[3 * s4t_num + 1] + s4t_dy;
+
+	/* Update Position of z */
+	s4t_count = 0;
+
+	for (S4 s4t_i = 0; s4t_i < 5; s4t_i++) {
+		if ((s4t_x_updated == this->as4_position[s4t_i * 3 + 0]) &&
+			(s4t_y_updated == this->as4_position[s4t_i * 3 + 1]))
+		{
+			s4t_count++;
+		}
+		else {
+			/* NOP */
+		}
+	}
+
+	for (S4 s4t_i = 0; s4t_i < 5; s4t_i++) {
+		if ((s4t_x_updated == player_enemy.as4_position[s4t_i * 3 + 0]) &&
+			(s4t_y_updated == player_enemy.as4_position[s4t_i * 3 + 1]))
+		{
+			s4t_count++;
+		}
+		else {
+			/* NOP */
+		}
+	}
+
+	s4t_z_updated = s4t_count;
+	
+	/* Update Position of X and Y */
+	this->as4_position[s4t_num * 3 + 0] = s4t_x_updated;
+	this->as4_position[s4t_num * 3 + 1] = s4t_y_updated;
+	this->as4_position[s4t_num * 3 + 2] = s4t_z_updated;
+
+	return 0;
+}
 /* Private */
+void vdg_InitInput(Player player_this, Player player_enemy, S4 *pas4t_input) {
+	S4	s4t_i = 0;
+
+	for (s4t_i = 0; s4t_i < 30; s4t_i++) {
+		if (s4t_i < 15) {
+			pas4t_input[s4t_i] = player_this.as4_position[s4t_i];
+		}
+		else {
+			pas4t_input[s4t_i] = player_enemy.as4_position[s4t_i - 15];
+		}
+	}
+}
+
+void vdg_InitOutput(F4 *paf4t_output) {
+	S4	s4t_i = 0;
+
+	for (s4t_i = 0; s4t_i < 30; s4t_i++) {
+		paf4t_output[s4t_i] = 0.0f;
+	}
+}
+
+void vdg_Predict(Player player_this, S4 *pas4t_input, F4 *paf4t_output) {
+	S4		s4t_i = 0;
+	S4		s4t_j = 0;
+
+	for (s4t_j = 0; s4t_j < 40; s4t_j++) {
+		for (s4t_i = 0; s4t_i < 30; s4t_i++) {
+			paf4t_output[s4t_j] += player_this.af4_weight[30 * s4t_j + s4t_i] * pas4t_input[s4t_i];
+		}
+	}
+
+}
+
+S4 s4t_DecodeOutput(F4 *paf4t_output) {
+	S4	s4t_max_index = 0;
+	F4	f4t_max_value = 0;
+
+	S4	s4t_i = 0;
+
+	f4t_max_value = paf4t_output[0];
+
+	for (s4t_i = 1; s4t_i < 30; s4t_i++) {
+		if (f4t_max_value < paf4t_output[s4t_i]) {
+			f4t_max_value = paf4t_output[s4t_i];
+			s4t_max_index = s4t_i;
+		}
+		else {
+			/* NOP */
+		}
+	}	
+
+	return s4t_max_index;
+}
