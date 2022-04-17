@@ -107,4 +107,5 @@ CMakeFiles/nocca.dir/class/judgeman.cpp.obj: \
  c:\users\10001222349\documents\nocca\inc\typedefs.h \
  c:\users\10001222349\documents\nocca\class\judgeman.h \
  c:\users\10001222349\documents\nocca\inc\typedefs.h \
- c:\users\10001222349\documents\nocca\class\player.h
+ c:\users\10001222349\documents\nocca\class\player.h \
+ c:\users\10001222349\documents\nocca\class\gene.h

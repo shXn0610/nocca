@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.0.0)
 
 project(nocca VERSION 0.1.0)
 
-add_executable(nocca class/player.cpp class/viewer.cpp class/judgeman.cpp main.cpp)
+add_executable(nocca class/player.cpp class/viewer.cpp class/judgeman.cpp class/gene.cpp main.cpp)
 

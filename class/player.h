@@ -3,6 +3,7 @@
 
 /* Incluldes */
 #include "..\inc\typedefs.h"
+#include "..\class\gene.h"
 
 /* Defines */
 
@@ -16,6 +17,7 @@
 class Player {
 public:
 	Player(EN_COLOR en_color);
+	Player(EN_COLOR en_color, Gene *gene);
 	~Player(void);
 
 	S4	 moveManually(Player player_enemy);

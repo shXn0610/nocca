@@ -16,6 +16,11 @@
 },
 {
   "directory": "C:/Users/10001222349/Documents/nocca/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\gene.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\gene.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/gene.cpp"
+},
+{
+  "directory": "C:/Users/10001222349/Documents/nocca/build",
   "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\main.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\main.cpp",
   "file": "C:/Users/10001222349/Documents/nocca/main.cpp"
 }

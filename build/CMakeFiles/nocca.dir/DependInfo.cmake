@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/10001222349/Documents/nocca/class/gene.cpp" "CMakeFiles/nocca.dir/class/gene.cpp.obj" "gcc" "CMakeFiles/nocca.dir/class/gene.cpp.obj.d"
   "C:/Users/10001222349/Documents/nocca/class/judgeman.cpp" "CMakeFiles/nocca.dir/class/judgeman.cpp.obj" "gcc" "CMakeFiles/nocca.dir/class/judgeman.cpp.obj.d"
   "C:/Users/10001222349/Documents/nocca/class/player.cpp" "CMakeFiles/nocca.dir/class/player.cpp.obj" "gcc" "CMakeFiles/nocca.dir/class/player.cpp.obj.d"
   "C:/Users/10001222349/Documents/nocca/class/viewer.cpp" "CMakeFiles/nocca.dir/class/viewer.cpp.obj" "gcc" "CMakeFiles/nocca.dir/class/viewer.cpp.obj.d"

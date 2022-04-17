@@ -107,6 +107,10 @@ CMakeFiles/nocca.dir/main.cpp.obj: \
  C:\Users\10001222349\Documents\nocca\inc/typedefs.h \
  C:\Users\10001222349\Documents\nocca\class/player.h \
  c:\users\10001222349\documents\nocca\inc\typedefs.h \
+ c:\users\10001222349\documents\nocca\class\gene.h \
+ c:\users\10001222349\documents\nocca\inc\typedefs.h \
+ c:\users\10001222349\documents\nocca\class\gene.h \
  C:\Users\10001222349\Documents\nocca\class/viewer.h \
  c:\users\10001222349\documents\nocca\class\player.h \
- C:\Users\10001222349\Documents\nocca\class/judgeman.h
+ C:\Users\10001222349\Documents\nocca\class/judgeman.h \
+ C:\Users\10001222349\Documents\nocca\class/gene.h

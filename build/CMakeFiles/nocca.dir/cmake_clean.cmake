@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/nocca.dir/class/gene.cpp.obj"
+  "CMakeFiles/nocca.dir/class/gene.cpp.obj.d"
   "CMakeFiles/nocca.dir/class/judgeman.cpp.obj"
   "CMakeFiles/nocca.dir/class/judgeman.cpp.obj.d"
   "CMakeFiles/nocca.dir/class/player.cpp.obj"

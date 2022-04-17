@@ -128,6 +128,30 @@ nocca/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/build
 .PHONY : nocca/fast
 
+class/gene.obj: class/gene.cpp.obj
+.PHONY : class/gene.obj
+
+# target to build an object file
+class/gene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/gene.cpp.obj
+.PHONY : class/gene.cpp.obj
+
+class/gene.i: class/gene.cpp.i
+.PHONY : class/gene.i
+
+# target to preprocess a source file
+class/gene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/gene.cpp.i
+.PHONY : class/gene.cpp.i
+
+class/gene.s: class/gene.cpp.s
+.PHONY : class/gene.s
+
+# target to generate assembly for a file
+class/gene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/gene.cpp.s
+.PHONY : class/gene.cpp.s
+
 class/judgeman.obj: class/judgeman.cpp.obj
 .PHONY : class/judgeman.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... nocca
+	@echo ... class/gene.obj
+	@echo ... class/gene.i
+	@echo ... class/gene.s
 	@echo ... class/judgeman.obj
 	@echo ... class/judgeman.i
 	@echo ... class/judgeman.s

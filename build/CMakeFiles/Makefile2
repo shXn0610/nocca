@@ -80,12 +80,12 @@ clean: CMakeFiles/nocca.dir/clean
 CMakeFiles/nocca.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target nocca"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target nocca"
 .PHONY : CMakeFiles/nocca.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nocca.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\10001222349\Documents\nocca\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\10001222349\Documents\nocca\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/nocca.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\10001222349\Documents\nocca\build\CMakeFiles 0
 .PHONY : CMakeFiles/nocca.dir/rule

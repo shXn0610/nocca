@@ -3,6 +3,7 @@
 #include <time.h>
 #include "..\inc\typedefs.h"
 #include "..\class\player.h"
+#include "..\class\gene.h"
 
 using namespace std;
 
@@ -43,15 +44,44 @@ Player::Player(EN_COLOR en_color) {
 	for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
 		Player::af4_weight[s4t_i] = ((float)rand() / (float)RAND_MAX) - 0.5f;
 	}
-
-	//cout << "Constructor is called.\n";
-	//cout << "\n";
 };
 
-Player::~Player() {
+Player::Player(EN_COLOR en_color, Gene *gene) {
+	S4		s4t_i;
 
-	//cout << "Destructor is called.\n";
-	//cout << "\n";
+	Player::en_color = en_color;
+
+	if (en_color == White) {
+		for (s4t_i = 0; s4t_i < 5; s4t_i++) {
+			Player::as4_position[s4t_i * 3 + 0] = s4t_i;
+			Player::as4_position[s4t_i * 3 + 1] = 0;
+			Player::as4_position[s4t_i * 3 + 2] = 0;
+		}
+
+		srand(time(NULL));
+		for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
+			Player::af4_weight[s4t_i] = gene->pf4t_gene_white[s4t_i];
+		}
+	}
+	else if (en_color == Black) {
+		for (s4t_i = 0; s4t_i < 5; s4t_i++) {
+			Player::as4_position[s4t_i * 3 + 0] = s4t_i;
+			Player::as4_position[s4t_i * 3 + 1] = 5;
+			Player::as4_position[s4t_i * 3 + 2] = 0;
+		}
+		srand(time(NULL));
+		for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
+			Player::af4_weight[s4t_i] = gene->pf4t_gene_black[s4t_i];
+		}
+	}
+	else {
+		/* NOP */
+	}
+
+};
+
+
+Player::~Player() {
 
 };
 
@@ -73,19 +103,19 @@ S4 Player::moveManually(Player player_enemy) {
 	S4	s4t_z_updated;
 
 	if (this->en_color == White) {
-		cout << "w*(0 ~ 4) : ";
+		//cout << "w*(0 ~ 4) : ";
     	cin >> s4t_num;
 	}
 	else {
-		cout << "b*(0 ~ 4) : ";
+		//cout << "b*(0 ~ 4) : ";
     	cin >> s4t_num;
 	}
 
-    cout << "x(-1 ~ 1) : ";
+    //cout << "x(-1 ~ 1) : ";
     cin >> s4t_dx;
-    cout << "y(-1 ~ 1) : ";
+    //cout << "y(-1 ~ 1) : ";
     cin >> s4t_dy;
-    cout << "\n";
+    //cout << "\n";
 
 	/* Check Error */
 	if ((0 <= s4t_num) && (s4t_num < 5)) {
@@ -391,14 +421,14 @@ S4 Player::moveAuto(Player player_enemy) {
 	}
 
 	if (this->en_color == White) {
-		cout << "w*(0 ~ 4) : " << s4t_num << "\n";
-    	cout << "x(-1 ~ 1) : " << s4t_x << "\n";
-    	cout << "y(-1 ~ 1) : " << s4t_y << "\n\n";
+		//cout << "w*(0 ~ 4) : " << s4t_num << "\n";
+    	//cout << "x(-1 ~ 1) : " << s4t_x << "\n";
+    	//cout << "y(-1 ~ 1) : " << s4t_y << "\n\n";
 	}
 	else if (this->en_color == Black) {
-		cout << "b*(0 ~ 4) : " << s4t_num << "\n";
-    	cout << "x(-1 ~ 1) : " << s4t_x << "\n";
-    	cout << "y(-1 ~ 1) : " << s4t_y << "\n\n";
+		//cout << "b*(0 ~ 4) : " << s4t_num << "\n";
+    	//cout << "x(-1 ~ 1) : " << s4t_x << "\n";
+    	//cout << "y(-1 ~ 1) : " << s4t_y << "\n\n";
 	}
 	else {
 		/* NOP */

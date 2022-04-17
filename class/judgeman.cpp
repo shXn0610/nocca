@@ -56,7 +56,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			
 			if (s4t_count == 15) {
 				/* White doesn't move. So Black wins. */
-				cout << "Black wins. White doesn't move.\n";
+				//cout << "Black wins. White doesn't move.\n";
 				return BlackWin;
 			}
 			else {
@@ -71,7 +71,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 					(as4_diff_player_white[s4t_i * 3 + 1] < (-1)))
 				{
 					/* White cheated. */
-					cout << "Black wins. White moves over 2 squares.\n";
+					//cout << "Black wins. White moves over 2 squares.\n";
 					return BlackWin;
 				}
 
@@ -84,10 +84,11 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			for (s4t_i = 0; s4t_i < 5; s4t_i++) {
 				if ((player_white.as4_position[3 * s4t_i + 0] < 0) ||
 					(player_white.as4_position[3 * s4t_i + 0] > 4) ||
-					(player_white.as4_position[3 * s4t_i + 1] < 0))
+					(player_white.as4_position[3 * s4t_i + 1] < 0) ||
+					(player_white.as4_position[3 * s4t_i + 2] > 2))
 				{
 				/* White mistaked */
-				cout << "Black wins. White is out of the board.\n";
+				//cout << "Black wins. White is out of the board.\n";
 				return BlackWin;
 				}
 				else {
@@ -144,7 +145,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 
 			if ((s4t_count != 10) && (s4t_flag == 0)) {
 				/* White makes space. */
-				cout << "Black wins. White makes space.\n";
+				//cout << "Black wins. White makes space.\n";
 				return BlackWin;
 			}
 			else {
@@ -155,7 +156,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			for (s4t_i = 0; s4t_i < 5; s4t_i++) {
 				if (player_white.as4_position[s4t_i * 3 + 1] == 6) {
 					/* White Wins */
-					cout << "White Wins. White reaches the end line.\n";
+					//cout << "White Wins. White reaches the end line.\n";
 					return WhiteWin;
 				}
 				else {
@@ -194,7 +195,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			}
 
 			if (s4t_count == 5) {
-				cout << "White overwelms Black.\n";
+				//cout << "White overwelms Black.\n";
 				return WhiteWin;
 			}
 			else {
@@ -207,7 +208,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 				Judgeman::s4_positionBlack_save[s4t_i] = player_black.as4_position[s4t_i]; 
 			}
 
-			cout << "White moved.\n\n";
+			//cout << "White moved.\n\n";
 			return BlackPlay;
 
 			break;
@@ -227,7 +228,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			
 			if (s4t_count == 15) {
 				/* Black doesn't move. So White wins. */
-				cout << "White wins. Black doesn't move.\n";
+				//cout << "White wins. Black doesn't move.\n";
 				return WhiteWin;
 			}
 			else {
@@ -242,7 +243,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 					(as4_diff_player_black[s4t_i * 3 + 1] < (-1)))
 				{
 					/* Black cheated. */
-					cout << "White wins. Black moves over 2 squares.\n";
+					//cout << "White wins. Black moves over 2 squares.\n";
 					return WhiteWin;
 				}
 
@@ -255,10 +256,11 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			for (s4t_i = 0; s4t_i < 5; s4t_i++) {
 				if ((player_black.as4_position[3 * s4t_i + 0] < 0) ||
 					(player_black.as4_position[3 * s4t_i + 0] > 4) ||
-					(player_black.as4_position[3 * s4t_i + 1] > 5))
+					(player_black.as4_position[3 * s4t_i + 1] > 5) ||
+					(player_black.as4_position[3 * s4t_i + 2] > 2))
 				{
 				/* Black mistaked */
-				cout << "White wins. Black is out of the board.\n";
+				//cout << "White wins. Black is out of the board.\n";
 				return WhiteWin;
 				}
 				else {
@@ -315,7 +317,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 
 			if ((s4t_count != 10) && (s4t_flag == 0)) {
 				/* White makes space. */
-				cout << "White wins. Black makes space.\n";
+				//cout << "White wins. Black makes space.\n";
 				return WhiteWin;
 			}
 			else {
@@ -326,7 +328,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			for (s4t_i = 0; s4t_i < 5; s4t_i++) {
 				if (player_black.as4_position[s4t_i * 3 + 1] == (-1)) {
 					/* Black Wins */
-					cout << "Black Wins. Black reaches the end line.\n";
+					//cout << "Black Wins. Black reaches the end line.\n";
 					return BlackWin;
 				}
 				else {
@@ -365,7 +367,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 			}
 
 			if (s4t_count == 5) {
-				cout << "Black overwelms White.\n";
+				//cout << "Black overwelms White.\n";
 				return BlackWin;
 			}
 			else {
@@ -378,7 +380,7 @@ EN_STATE Judgeman::judgeWinLose(Player player_white, Player player_black, EN_STA
 				Judgeman::s4_positionBlack_save[s4t_i] = player_black.as4_position[s4t_i]; 
 			}
 
-			cout << "Black moved.\n\n";
+			//cout << "Black moved.\n\n";
 			return WhitePlay;
 			break;
 
