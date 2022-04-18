@@ -606,6 +606,7 @@ CMakeFiles/nocca.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/ostream.tcc \
   C:/MinGW/lib/gcc/mingw32/8.2.0/include/c++/istream \
   C:/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/istream.tcc \
+  C:/MinGW/include/time.h \
   ../inc/typedefs.h \
   ../class/player.h \
   ../inc/typedefs.h \

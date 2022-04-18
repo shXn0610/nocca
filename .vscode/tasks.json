@@ -1,10 +1,9 @@
 {
-    "version": "2.0.0",
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "nocca",
-            "command": "gcc",
+            "label": "C/C++: g++.exe アクティブなファイルのビルド",
+            "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -19,12 +18,12 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "コンパイラ: C:\\MinGW\\bin\\cpp.exe"
+            "detail": "デバッガーによって生成されたタスク。"
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: cpp.exe アクティブなファイルのビルド",
-            "command": "C:\\MinGW\\bin\\cpp.exe",
+            "label": "C/C++: gcc.exe アクティブなファイルのビルド",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -44,5 +43,6 @@
             },
             "detail": "デバッガーによって生成されたタスク。"
         }
-    ]
+    ],
+    "version": "2.0.0"
 }

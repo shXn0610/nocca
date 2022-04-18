@@ -60,7 +60,7 @@ Player::Player(EN_COLOR en_color, Gene *gene) {
 
 		srand(time(NULL));
 		for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
-			Player::af4_weight[s4t_i] = gene->pf4t_gene_white[s4t_i];
+			Player::af4_weight[s4t_i] = gene->pf4t_gene[s4t_i];
 		}
 	}
 	else if (en_color == Black) {
@@ -71,7 +71,7 @@ Player::Player(EN_COLOR en_color, Gene *gene) {
 		}
 		srand(time(NULL));
 		for (s4t_i = 0; s4t_i < 1200; s4t_i++) {
-			Player::af4_weight[s4t_i] = gene->pf4t_gene_black[s4t_i];
+			Player::af4_weight[s4t_i] = gene->pf4t_gene[s4t_i];
 		}
 	}
 	else {

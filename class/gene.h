@@ -22,8 +22,7 @@ public:
 	void vdg_init(S4 s4_layer_input, S4 s4_layer_output, EN_COLOR en_color);
 
 	S4	s4t_count_win = 0;
-	F4	*pf4t_gene_white = NULL;
-	F4	*pf4t_gene_black = NULL;
+	F4	*pf4t_gene = NULL;
 	EN_COLOR en_color;
 
 private:
