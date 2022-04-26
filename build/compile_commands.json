@@ -1,23 +1,33 @@
 [
 {
   "directory": "C:/Users/10001222349/Documents/nocca/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\player.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\player.cpp",
-  "file": "C:/Users/10001222349/Documents/nocca/class/player.cpp"
-},
-{
-  "directory": "C:/Users/10001222349/Documents/nocca/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\viewer.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\viewer.cpp",
-  "file": "C:/Users/10001222349/Documents/nocca/class/viewer.cpp"
-},
-{
-  "directory": "C:/Users/10001222349/Documents/nocca/build",
-  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\judgeman.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\judgeman.cpp",
-  "file": "C:/Users/10001222349/Documents/nocca/class/judgeman.cpp"
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\ga.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\ga.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/ga.cpp"
 },
 {
   "directory": "C:/Users/10001222349/Documents/nocca/build",
   "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\gene.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\gene.cpp",
   "file": "C:/Users/10001222349/Documents/nocca/class/gene.cpp"
+},
+{
+  "directory": "C:/Users/10001222349/Documents/nocca/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\player.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\player.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/player.cpp"
+},
+{
+  "directory": "C:/Users/10001222349/Documents/nocca/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\nocca.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\nocca.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/nocca.cpp"
+},
+{
+  "directory": "C:/Users/10001222349/Documents/nocca/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\block.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\block.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/block.cpp"
+},
+{
+  "directory": "C:/Users/10001222349/Documents/nocca/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\nocca.dir\\class\\board.cpp.obj -c C:\\Users\\10001222349\\Documents\\nocca\\class\\board.cpp",
+  "file": "C:/Users/10001222349/Documents/nocca/class/board.cpp"
 },
 {
   "directory": "C:/Users/10001222349/Documents/nocca/build",

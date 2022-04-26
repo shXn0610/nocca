@@ -105,8 +105,8 @@ CMakeFiles/nocca.dir/class/player.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\istream.tcc \
  c:\mingw\include\time.h \
+ C:\Users\10001222349\Documents\nocca\class\player.h \
  c:\users\10001222349\documents\nocca\inc\typedefs.h \
- c:\users\10001222349\documents\nocca\class\player.h \
- c:\users\10001222349\documents\nocca\inc\typedefs.h \
- c:\users\10001222349\documents\nocca\class\gene.h \
- c:\users\10001222349\documents\nocca\class\gene.h
+ C:\Users\10001222349\Documents\nocca\class\board.h \
+ C:\Users\10001222349\Documents\nocca\class\block.h \
+ C:\Users\10001222349\Documents\nocca\class\gene.h

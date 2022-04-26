@@ -3,7 +3,6 @@
 
 /* Incluldes */
 #include "..\inc\typedefs.h"
-#include "..\class\gene.h"
 
 /* Defines */
 
@@ -18,13 +17,12 @@ class Gene {
 public:
 	Gene(void);
 	~Gene(void);
+	void initWeight(S4 s4_input_layer, S4 s4_output_layer);
+	void clearWeight(S4 s4_input_layer, S4 s4_output_layer);
 
-	void vdg_init(S4 s4_layer_input, S4 s4_layer_output, EN_COLOR en_color);
-
-	S4	s4t_count_win = 0;
-	F4	*pf4t_gene = NULL;
-	EN_COLOR en_color;
-
+	S4 s4_count_win;
+	F4 **ppf4_weight;
+	
 private:
     
 };

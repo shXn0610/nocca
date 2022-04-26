@@ -64,6 +64,26 @@ CMAKE_BINARY_DIR = C:\Users\10001222349\Documents\nocca\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/10001222349/Documents/nocca/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -128,6 +148,78 @@ nocca/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/build
 .PHONY : nocca/fast
 
+class/block.obj: class/block.cpp.obj
+.PHONY : class/block.obj
+
+# target to build an object file
+class/block.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/block.cpp.obj
+.PHONY : class/block.cpp.obj
+
+class/block.i: class/block.cpp.i
+.PHONY : class/block.i
+
+# target to preprocess a source file
+class/block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/block.cpp.i
+.PHONY : class/block.cpp.i
+
+class/block.s: class/block.cpp.s
+.PHONY : class/block.s
+
+# target to generate assembly for a file
+class/block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/block.cpp.s
+.PHONY : class/block.cpp.s
+
+class/board.obj: class/board.cpp.obj
+.PHONY : class/board.obj
+
+# target to build an object file
+class/board.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/board.cpp.obj
+.PHONY : class/board.cpp.obj
+
+class/board.i: class/board.cpp.i
+.PHONY : class/board.i
+
+# target to preprocess a source file
+class/board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/board.cpp.i
+.PHONY : class/board.cpp.i
+
+class/board.s: class/board.cpp.s
+.PHONY : class/board.s
+
+# target to generate assembly for a file
+class/board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/board.cpp.s
+.PHONY : class/board.cpp.s
+
+class/ga.obj: class/ga.cpp.obj
+.PHONY : class/ga.obj
+
+# target to build an object file
+class/ga.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/ga.cpp.obj
+.PHONY : class/ga.cpp.obj
+
+class/ga.i: class/ga.cpp.i
+.PHONY : class/ga.i
+
+# target to preprocess a source file
+class/ga.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/ga.cpp.i
+.PHONY : class/ga.cpp.i
+
+class/ga.s: class/ga.cpp.s
+.PHONY : class/ga.s
+
+# target to generate assembly for a file
+class/ga.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/ga.cpp.s
+.PHONY : class/ga.cpp.s
+
 class/gene.obj: class/gene.cpp.obj
 .PHONY : class/gene.obj
 
@@ -152,29 +244,29 @@ class/gene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/gene.cpp.s
 .PHONY : class/gene.cpp.s
 
-class/judgeman.obj: class/judgeman.cpp.obj
-.PHONY : class/judgeman.obj
+class/nocca.obj: class/nocca.cpp.obj
+.PHONY : class/nocca.obj
 
 # target to build an object file
-class/judgeman.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.obj
-.PHONY : class/judgeman.cpp.obj
+class/nocca.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/nocca.cpp.obj
+.PHONY : class/nocca.cpp.obj
 
-class/judgeman.i: class/judgeman.cpp.i
-.PHONY : class/judgeman.i
+class/nocca.i: class/nocca.cpp.i
+.PHONY : class/nocca.i
 
 # target to preprocess a source file
-class/judgeman.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.i
-.PHONY : class/judgeman.cpp.i
+class/nocca.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/nocca.cpp.i
+.PHONY : class/nocca.cpp.i
 
-class/judgeman.s: class/judgeman.cpp.s
-.PHONY : class/judgeman.s
+class/nocca.s: class/nocca.cpp.s
+.PHONY : class/nocca.s
 
 # target to generate assembly for a file
-class/judgeman.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/judgeman.cpp.s
-.PHONY : class/judgeman.cpp.s
+class/nocca.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/nocca.cpp.s
+.PHONY : class/nocca.cpp.s
 
 class/player.obj: class/player.cpp.obj
 .PHONY : class/player.obj
@@ -199,30 +291,6 @@ class/player.s: class/player.cpp.s
 class/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/player.cpp.s
 .PHONY : class/player.cpp.s
-
-class/viewer.obj: class/viewer.cpp.obj
-.PHONY : class/viewer.obj
-
-# target to build an object file
-class/viewer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/viewer.cpp.obj
-.PHONY : class/viewer.cpp.obj
-
-class/viewer.i: class/viewer.cpp.i
-.PHONY : class/viewer.i
-
-# target to preprocess a source file
-class/viewer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/viewer.cpp.i
-.PHONY : class/viewer.cpp.i
-
-class/viewer.s: class/viewer.cpp.s
-.PHONY : class/viewer.s
-
-# target to generate assembly for a file
-class/viewer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\nocca.dir\build.make CMakeFiles/nocca.dir/class/viewer.cpp.s
-.PHONY : class/viewer.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -255,20 +323,28 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... package
+	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... nocca
+	@echo ... class/block.obj
+	@echo ... class/block.i
+	@echo ... class/block.s
+	@echo ... class/board.obj
+	@echo ... class/board.i
+	@echo ... class/board.s
+	@echo ... class/ga.obj
+	@echo ... class/ga.i
+	@echo ... class/ga.s
 	@echo ... class/gene.obj
 	@echo ... class/gene.i
 	@echo ... class/gene.s
-	@echo ... class/judgeman.obj
-	@echo ... class/judgeman.i
-	@echo ... class/judgeman.s
+	@echo ... class/nocca.obj
+	@echo ... class/nocca.i
+	@echo ... class/nocca.s
 	@echo ... class/player.obj
 	@echo ... class/player.i
 	@echo ... class/player.s
-	@echo ... class/viewer.obj
-	@echo ... class/viewer.i
-	@echo ... class/viewer.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

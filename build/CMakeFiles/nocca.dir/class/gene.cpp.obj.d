@@ -105,7 +105,6 @@ CMakeFiles/nocca.dir/class/gene.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\bits\istream.tcc \
  c:\mingw\include\time.h \
- c:\users\10001222349\documents\nocca\inc\typedefs.h \
- c:\users\10001222349\documents\nocca\class\gene.h \
- c:\users\10001222349\documents\nocca\inc\typedefs.h \
- c:\users\10001222349\documents\nocca\class\gene.h
+ c:\mingw\lib\gcc\mingw32\8.2.0\include\c++\stdlib.h \
+ C:\Users\10001222349\Documents\nocca\class\gene.h \
+ c:\users\10001222349\documents\nocca\inc\typedefs.h

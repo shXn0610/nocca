@@ -21,18 +21,17 @@ typedef double						F8;		/* Floating point 8byte data type		*/
 typedef int							BL;		/* Boolean data type					*/
 
 /* Enum */
-enum EN_COLOR {
-    White,
-    Black,
-};
+typedef enum tag_EN_COLOR {
+    WHITE = 0,
+    BLACK
+} EN_COLOR;
 
-enum EN_STATE {
-    WhitePlay,
-    BlackPlay,
-    WhiteWin,
-    BlackWin,
-    Error
-};
+typedef enum tag_EN_STATE {
+    WHITE_PLAYING = 0,
+    BLACK_PLAYING,
+    WHITE_WIN,
+    BLACK_WIN
+} EN_STATE;
 
 /* Structs */
 

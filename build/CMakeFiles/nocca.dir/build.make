@@ -68,52 +68,24 @@ include CMakeFiles/nocca.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/nocca.dir/flags.make
 
-CMakeFiles/nocca.dir/class/player.cpp.obj: CMakeFiles/nocca.dir/flags.make
-CMakeFiles/nocca.dir/class/player.cpp.obj: ../class/player.cpp
-CMakeFiles/nocca.dir/class/player.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nocca.dir/class/player.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/player.cpp.obj -MF CMakeFiles\nocca.dir\class\player.cpp.obj.d -o CMakeFiles\nocca.dir\class\player.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\player.cpp
+CMakeFiles/nocca.dir/class/ga.cpp.obj: CMakeFiles/nocca.dir/flags.make
+CMakeFiles/nocca.dir/class/ga.cpp.obj: ../class/ga.cpp
+CMakeFiles/nocca.dir/class/ga.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/nocca.dir/class/ga.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/ga.cpp.obj -MF CMakeFiles\nocca.dir\class\ga.cpp.obj.d -o CMakeFiles\nocca.dir\class\ga.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\ga.cpp
 
-CMakeFiles/nocca.dir/class/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/player.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\player.cpp > CMakeFiles\nocca.dir\class\player.cpp.i
+CMakeFiles/nocca.dir/class/ga.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/ga.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\ga.cpp > CMakeFiles\nocca.dir\class\ga.cpp.i
 
-CMakeFiles/nocca.dir/class/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/player.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\player.cpp -o CMakeFiles\nocca.dir\class\player.cpp.s
-
-CMakeFiles/nocca.dir/class/viewer.cpp.obj: CMakeFiles/nocca.dir/flags.make
-CMakeFiles/nocca.dir/class/viewer.cpp.obj: ../class/viewer.cpp
-CMakeFiles/nocca.dir/class/viewer.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nocca.dir/class/viewer.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/viewer.cpp.obj -MF CMakeFiles\nocca.dir\class\viewer.cpp.obj.d -o CMakeFiles\nocca.dir\class\viewer.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\viewer.cpp
-
-CMakeFiles/nocca.dir/class/viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/viewer.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\viewer.cpp > CMakeFiles\nocca.dir\class\viewer.cpp.i
-
-CMakeFiles/nocca.dir/class/viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/viewer.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\viewer.cpp -o CMakeFiles\nocca.dir\class\viewer.cpp.s
-
-CMakeFiles/nocca.dir/class/judgeman.cpp.obj: CMakeFiles/nocca.dir/flags.make
-CMakeFiles/nocca.dir/class/judgeman.cpp.obj: ../class/judgeman.cpp
-CMakeFiles/nocca.dir/class/judgeman.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/nocca.dir/class/judgeman.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/judgeman.cpp.obj -MF CMakeFiles\nocca.dir\class\judgeman.cpp.obj.d -o CMakeFiles\nocca.dir\class\judgeman.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\judgeman.cpp
-
-CMakeFiles/nocca.dir/class/judgeman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/judgeman.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\judgeman.cpp > CMakeFiles\nocca.dir\class\judgeman.cpp.i
-
-CMakeFiles/nocca.dir/class/judgeman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/judgeman.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\judgeman.cpp -o CMakeFiles\nocca.dir\class\judgeman.cpp.s
+CMakeFiles/nocca.dir/class/ga.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/ga.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\ga.cpp -o CMakeFiles\nocca.dir\class\ga.cpp.s
 
 CMakeFiles/nocca.dir/class/gene.cpp.obj: CMakeFiles/nocca.dir/flags.make
 CMakeFiles/nocca.dir/class/gene.cpp.obj: ../class/gene.cpp
 CMakeFiles/nocca.dir/class/gene.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/nocca.dir/class/gene.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nocca.dir/class/gene.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/gene.cpp.obj -MF CMakeFiles\nocca.dir\class\gene.cpp.obj.d -o CMakeFiles\nocca.dir\class\gene.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\gene.cpp
 
 CMakeFiles/nocca.dir/class/gene.cpp.i: cmake_force
@@ -124,10 +96,66 @@ CMakeFiles/nocca.dir/class/gene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/gene.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\gene.cpp -o CMakeFiles\nocca.dir\class\gene.cpp.s
 
+CMakeFiles/nocca.dir/class/player.cpp.obj: CMakeFiles/nocca.dir/flags.make
+CMakeFiles/nocca.dir/class/player.cpp.obj: ../class/player.cpp
+CMakeFiles/nocca.dir/class/player.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/nocca.dir/class/player.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/player.cpp.obj -MF CMakeFiles\nocca.dir\class\player.cpp.obj.d -o CMakeFiles\nocca.dir\class\player.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\player.cpp
+
+CMakeFiles/nocca.dir/class/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/player.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\player.cpp > CMakeFiles\nocca.dir\class\player.cpp.i
+
+CMakeFiles/nocca.dir/class/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/player.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\player.cpp -o CMakeFiles\nocca.dir\class\player.cpp.s
+
+CMakeFiles/nocca.dir/class/nocca.cpp.obj: CMakeFiles/nocca.dir/flags.make
+CMakeFiles/nocca.dir/class/nocca.cpp.obj: ../class/nocca.cpp
+CMakeFiles/nocca.dir/class/nocca.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/nocca.dir/class/nocca.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/nocca.cpp.obj -MF CMakeFiles\nocca.dir\class\nocca.cpp.obj.d -o CMakeFiles\nocca.dir\class\nocca.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\nocca.cpp
+
+CMakeFiles/nocca.dir/class/nocca.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/nocca.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\nocca.cpp > CMakeFiles\nocca.dir\class\nocca.cpp.i
+
+CMakeFiles/nocca.dir/class/nocca.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/nocca.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\nocca.cpp -o CMakeFiles\nocca.dir\class\nocca.cpp.s
+
+CMakeFiles/nocca.dir/class/block.cpp.obj: CMakeFiles/nocca.dir/flags.make
+CMakeFiles/nocca.dir/class/block.cpp.obj: ../class/block.cpp
+CMakeFiles/nocca.dir/class/block.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nocca.dir/class/block.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/block.cpp.obj -MF CMakeFiles\nocca.dir\class\block.cpp.obj.d -o CMakeFiles\nocca.dir\class\block.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\block.cpp
+
+CMakeFiles/nocca.dir/class/block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/block.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\block.cpp > CMakeFiles\nocca.dir\class\block.cpp.i
+
+CMakeFiles/nocca.dir/class/block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/block.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\block.cpp -o CMakeFiles\nocca.dir\class\block.cpp.s
+
+CMakeFiles/nocca.dir/class/board.cpp.obj: CMakeFiles/nocca.dir/flags.make
+CMakeFiles/nocca.dir/class/board.cpp.obj: ../class/board.cpp
+CMakeFiles/nocca.dir/class/board.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nocca.dir/class/board.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/class/board.cpp.obj -MF CMakeFiles\nocca.dir\class\board.cpp.obj.d -o CMakeFiles\nocca.dir\class\board.cpp.obj -c C:\Users\10001222349\Documents\nocca\class\board.cpp
+
+CMakeFiles/nocca.dir/class/board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nocca.dir/class/board.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\10001222349\Documents\nocca\class\board.cpp > CMakeFiles\nocca.dir\class\board.cpp.i
+
+CMakeFiles/nocca.dir/class/board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nocca.dir/class/board.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\10001222349\Documents\nocca\class\board.cpp -o CMakeFiles\nocca.dir\class\board.cpp.s
+
 CMakeFiles/nocca.dir/main.cpp.obj: CMakeFiles/nocca.dir/flags.make
 CMakeFiles/nocca.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/nocca.dir/main.cpp.obj: CMakeFiles/nocca.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nocca.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/nocca.dir/main.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/nocca.dir/main.cpp.obj -MF CMakeFiles\nocca.dir\main.cpp.obj.d -o CMakeFiles\nocca.dir\main.cpp.obj -c C:\Users\10001222349\Documents\nocca\main.cpp
 
 CMakeFiles/nocca.dir/main.cpp.i: cmake_force
@@ -140,25 +168,29 @@ CMakeFiles/nocca.dir/main.cpp.s: cmake_force
 
 # Object files for target nocca
 nocca_OBJECTS = \
-"CMakeFiles/nocca.dir/class/player.cpp.obj" \
-"CMakeFiles/nocca.dir/class/viewer.cpp.obj" \
-"CMakeFiles/nocca.dir/class/judgeman.cpp.obj" \
+"CMakeFiles/nocca.dir/class/ga.cpp.obj" \
 "CMakeFiles/nocca.dir/class/gene.cpp.obj" \
+"CMakeFiles/nocca.dir/class/player.cpp.obj" \
+"CMakeFiles/nocca.dir/class/nocca.cpp.obj" \
+"CMakeFiles/nocca.dir/class/block.cpp.obj" \
+"CMakeFiles/nocca.dir/class/board.cpp.obj" \
 "CMakeFiles/nocca.dir/main.cpp.obj"
 
 # External object files for target nocca
 nocca_EXTERNAL_OBJECTS =
 
-nocca.exe: CMakeFiles/nocca.dir/class/player.cpp.obj
-nocca.exe: CMakeFiles/nocca.dir/class/viewer.cpp.obj
-nocca.exe: CMakeFiles/nocca.dir/class/judgeman.cpp.obj
+nocca.exe: CMakeFiles/nocca.dir/class/ga.cpp.obj
 nocca.exe: CMakeFiles/nocca.dir/class/gene.cpp.obj
+nocca.exe: CMakeFiles/nocca.dir/class/player.cpp.obj
+nocca.exe: CMakeFiles/nocca.dir/class/nocca.cpp.obj
+nocca.exe: CMakeFiles/nocca.dir/class/block.cpp.obj
+nocca.exe: CMakeFiles/nocca.dir/class/board.cpp.obj
 nocca.exe: CMakeFiles/nocca.dir/main.cpp.obj
 nocca.exe: CMakeFiles/nocca.dir/build.make
 nocca.exe: CMakeFiles/nocca.dir/linklibs.rsp
 nocca.exe: CMakeFiles/nocca.dir/objects1.rsp
 nocca.exe: CMakeFiles/nocca.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable nocca.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\10001222349\Documents\nocca\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable nocca.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\nocca.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
