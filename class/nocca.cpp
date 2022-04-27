@@ -107,6 +107,7 @@ EN_STATE Nocca::startGameGA(Gene *gene_white, Gene *gene_black) {
 
 		if (en_state == WHITE_PLAYING) {
 			player_white.moveAutoGA(board, *gene_white);
+			//player_white.moveAuto(board);
 		}
 		else if (en_state == BLACK_PLAYING) {
 			//player_black.moveAutoGA(board, *gene_black);

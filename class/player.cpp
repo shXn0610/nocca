@@ -265,6 +265,8 @@ void Player::moveAutoGA(Board &board, Gene &gene) {
         for (S4 s4t_j = 0; s4t_j < 30; s4t_j++) {
             af4t_output[s4t_i] += (gene.ppf4_weight[s4t_i][s4t_j] * af4t_input[s4t_j]);
         }
+
+		af4t_output[s4t_i] += gene.pf4_bias[s4t_i];
     }
 
     f4t_value_max = af4t_output[0];

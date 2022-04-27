@@ -26,6 +26,7 @@ void Gene::initWeight(S4 s4_input_layer, S4 s4_output_layer) {
     struct timespec ts;
 
     ppf4_weight = (F4**)malloc(sizeof(F4*) * s4_output_layer);
+    pf4_bias = (F4*)malloc(sizeof(F4) * s4_output_layer);
     
     for (S4 s4t_i = 0; s4t_i < s4_output_layer; s4t_i++) {
         ppf4_weight[s4t_i] = (F4*)malloc(sizeof(F4) * s4_input_layer);
@@ -36,6 +37,7 @@ void Gene::initWeight(S4 s4_input_layer, S4 s4_output_layer) {
             clock_gettime(CLOCK_MONOTONIC, &ts);
             srand(ts.tv_nsec);
             ppf4_weight[s4t_i][s4t_j] = ((float)rand() / (float)RAND_MAX) * WEIGHT_MAX - 0.5f * WEIGHT_MAX;
+            pf4_bias[s4t_i] = ((float)rand() / (float)RAND_MAX) * WEIGHT_MAX - 0.5f * WEIGHT_MAX;
         }
     }
 }
@@ -47,5 +49,6 @@ void Gene::clearWeight(S4 s4_input_layer, S4 s4_output_layer) {
     }
 
     free(ppf4_weight);
+    free(pf4_bias);
 }
 /* Sub */

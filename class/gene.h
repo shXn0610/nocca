@@ -22,6 +22,7 @@ public:
 
 	S4 s4_count_win;
 	F4 **ppf4_weight;
+	F4 *pf4_bias;
 	
 private:
     

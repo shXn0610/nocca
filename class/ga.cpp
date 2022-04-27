@@ -49,19 +49,7 @@ void GA::startGA() {
         evaluation(gene_white, gene_black);
         evolution(gene_white, gene_black, gene_white_parent, gene_black_parent);
 
-#if 0
-        cout << "white : ";
-        for (S4 s4t_i = 0; s4t_i < NUM_GENE; s4t_i++) {
-            cout << gene_white[s4t_i].s4_count_win << " ";
-        }
-        cout << "\n";
-        cout << "black : ";
-        for (S4 s4t_i = 0; s4t_i < NUM_GENE; s4t_i++) {
-            cout << gene_black[s4t_i].s4_count_win << " ";
-        }
-        cout << "\n\n";
-#endif
-        if (((s4t_j + 1) % 10) == 0) {
+        if (((s4t_j + 1) % 5) == 0) {
             s4t_sum = 0;
             s4t_ave = 0;
             for (S4 s4t_i = 0; s4t_i < NUM_GENE; s4t_i++) {
@@ -74,8 +62,6 @@ void GA::startGA() {
         else {
             /* NOP */
         }
-
-            
     }
 
     cout << "end.\n";
@@ -236,35 +222,69 @@ void GA::BLXalpha(
     F4 f4t_weight_max_black = 0.0f;
     F4 f4t_weight_min_black[OUTPUT_LAYER][INPUT_LAYER];
     F4 f4t_weight_diff_black[OUTPUT_LAYER][INPUT_LAYER];
-    F4 f4t_tmp = 0.0f;
+    F4 f4t_weight_tmp = 0.0f;
+
+    F4 f4t_bias_max_white = 0.0f;
+    F4 f4t_bias_min_white[OUTPUT_LAYER];
+    F4 f4t_bias_diff_white[OUTPUT_LAYER];
+    F4 f4t_bias_max_black = 0.0f;
+    F4 f4t_bias_min_black[OUTPUT_LAYER];
+    F4 f4t_bias_diff_black[OUTPUT_LAYER];
+    F4 f4t_bias_tmp = 0.0f;
+
     struct timespec ts;
 
     for (S4 s4t_i = 0; s4t_i < OUTPUT_LAYER; s4t_i++) {
         for (S4 s4t_j = 0; s4t_j < INPUT_LAYER; s4t_j++) {
             if (gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] >= gene_white_parent[1].ppf4_weight[s4t_i][s4t_j]) {
-                f4t_tmp = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] - gene_white_parent[1].ppf4_weight[s4t_i][s4t_j];
-                f4t_weight_max_white = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] + f4t_tmp * ALPHA;
-                f4t_weight_min_white[s4t_i][s4t_j] = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] - f4t_tmp * ALPHA;
+                f4t_weight_tmp = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] - gene_white_parent[1].ppf4_weight[s4t_i][s4t_j];
+                f4t_weight_max_white = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] + f4t_weight_tmp * ALPHA;
+                f4t_weight_min_white[s4t_i][s4t_j] = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] - f4t_weight_tmp * ALPHA;
             }
             else {
-                f4t_tmp = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] - gene_white_parent[0].ppf4_weight[s4t_i][s4t_j];
-                f4t_weight_max_white = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] + f4t_tmp * ALPHA;
-                f4t_weight_min_white[s4t_i][s4t_j] = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] - f4t_tmp * ALPHA;
+                f4t_weight_tmp = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] - gene_white_parent[0].ppf4_weight[s4t_i][s4t_j];
+                f4t_weight_max_white = gene_white_parent[1].ppf4_weight[s4t_i][s4t_j] + f4t_weight_tmp * ALPHA;
+                f4t_weight_min_white[s4t_i][s4t_j] = gene_white_parent[0].ppf4_weight[s4t_i][s4t_j] - f4t_weight_tmp * ALPHA;
             }
             f4t_weight_diff_white[s4t_i][s4t_j] = f4t_weight_max_white - f4t_weight_min_white[s4t_i][s4t_j];
 
             if (gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] >= gene_black_parent[1].ppf4_weight[s4t_i][s4t_j]) {
-                f4t_tmp = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] - gene_black_parent[1].ppf4_weight[s4t_i][s4t_j];
-                f4t_weight_max_black = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] + f4t_tmp * ALPHA;
-                f4t_weight_min_black[s4t_i][s4t_j] = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] - f4t_tmp * ALPHA;
+                f4t_weight_tmp = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] - gene_black_parent[1].ppf4_weight[s4t_i][s4t_j];
+                f4t_weight_max_black = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] + f4t_weight_tmp * ALPHA;
+                f4t_weight_min_black[s4t_i][s4t_j] = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] - f4t_weight_tmp * ALPHA;
             }
             else {
-                f4t_tmp = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] - gene_black_parent[0].ppf4_weight[s4t_i][s4t_j];
-                f4t_weight_max_black = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] + f4t_tmp * ALPHA;
-                f4t_weight_min_black[s4t_i][s4t_j] = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] - f4t_tmp * ALPHA;
+                f4t_weight_tmp = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] - gene_black_parent[0].ppf4_weight[s4t_i][s4t_j];
+                f4t_weight_max_black = gene_black_parent[1].ppf4_weight[s4t_i][s4t_j] + f4t_weight_tmp * ALPHA;
+                f4t_weight_min_black[s4t_i][s4t_j] = gene_black_parent[0].ppf4_weight[s4t_i][s4t_j] - f4t_weight_tmp * ALPHA;
             }
             f4t_weight_diff_black[s4t_i][s4t_j] = f4t_weight_max_black - f4t_weight_min_black[s4t_i][s4t_j];
         }
+
+        if (gene_white_parent[0].pf4_bias[s4t_i] >= gene_white_parent[1].pf4_bias[s4t_i]) {
+            f4t_bias_tmp = gene_white_parent[0].pf4_bias[s4t_i] - gene_white_parent[1].pf4_bias[s4t_i];
+            f4t_bias_max_white = gene_white_parent[0].pf4_bias[s4t_i] + f4t_bias_tmp * ALPHA;
+            f4t_bias_min_white[s4t_i] = gene_white_parent[1].pf4_bias[s4t_i] - f4t_bias_tmp * ALPHA;
+        }
+        else {
+            f4t_bias_tmp = gene_white_parent[1].pf4_bias[s4t_i] - gene_white_parent[0].pf4_bias[s4t_i];
+            f4t_bias_max_white = gene_white_parent[1].pf4_bias[s4t_i] + f4t_bias_tmp * ALPHA;
+            f4t_bias_min_white[s4t_i] = gene_white_parent[0].pf4_bias[s4t_i] - f4t_bias_tmp * ALPHA;
+        }
+        f4t_bias_diff_white[s4t_i] = f4t_bias_max_white - f4t_bias_min_white[s4t_i];
+
+        if (gene_black_parent[0].pf4_bias[s4t_i] >= gene_black_parent[1].pf4_bias[s4t_i]) {
+            f4t_bias_tmp = gene_black_parent[0].pf4_bias[s4t_i] - gene_black_parent[1].pf4_bias[s4t_i];
+            f4t_bias_max_black = gene_black_parent[0].pf4_bias[s4t_i] + f4t_bias_tmp * ALPHA;
+            f4t_bias_min_black[s4t_i] = gene_black_parent[1].pf4_bias[s4t_i] - f4t_bias_tmp * ALPHA;
+        }
+        else {
+            f4t_bias_tmp = gene_black_parent[1].pf4_bias[s4t_i] - gene_black_parent[0].pf4_bias[s4t_i];
+            f4t_bias_max_black = gene_black_parent[1].pf4_bias[s4t_i] + f4t_bias_tmp * ALPHA;
+            f4t_bias_min_black[s4t_i] = gene_black_parent[0].pf4_bias[s4t_i] - f4t_bias_tmp * ALPHA;
+        }
+        f4t_bias_diff_black[s4t_i] = f4t_bias_max_black - f4t_bias_min_black[s4t_i];
+
     }
 
     for (s4t_num = 0; s4t_num < 2; s4t_num++) {
@@ -273,6 +293,9 @@ void GA::BLXalpha(
                 gene_white[s4t_num].ppf4_weight[s4t_i][s4t_j] = gene_white_parent[s4t_num].ppf4_weight[s4t_i][s4t_j];
                 gene_black[s4t_num].ppf4_weight[s4t_i][s4t_j] = gene_black_parent[s4t_num].ppf4_weight[s4t_i][s4t_j];
             }
+
+            gene_white[s4t_num].pf4_bias[s4t_i] = gene_white_parent[s4t_num].pf4_bias[s4t_i];
+            gene_black[s4t_num].pf4_bias[s4t_i] = gene_black_parent[s4t_num].pf4_bias[s4t_i];
         }
     }
 
@@ -284,6 +307,10 @@ void GA::BLXalpha(
                 gene_white[s4t_num].ppf4_weight[s4t_i][s4t_j] = f4t_weight_min_white[s4t_i][s4t_j] + ((float)rand() / (float)RAND_MAX) * f4t_weight_diff_white[s4t_i][s4t_j];
                 gene_black[s4t_num].ppf4_weight[s4t_i][s4t_j] = f4t_weight_min_black[s4t_i][s4t_j] + ((float)rand() / (float)RAND_MAX) * f4t_weight_diff_black[s4t_i][s4t_j];
             }
+
+            gene_white[s4t_num].pf4_bias[s4t_i] = f4t_bias_min_white[s4t_i] + ((float)rand() / (float)RAND_MAX) * f4t_bias_diff_white[s4t_i];
+            gene_black[s4t_num].pf4_bias[s4t_i] = f4t_bias_min_black[s4t_i] + ((float)rand() / (float)RAND_MAX) * f4t_bias_diff_black[s4t_i];
+
         }
     }
 }
